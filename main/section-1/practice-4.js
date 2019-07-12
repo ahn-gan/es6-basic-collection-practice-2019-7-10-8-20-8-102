@@ -5,8 +5,6 @@ module.exports = function collectSameElements(collectionA, objectB) {
   let filterArray = collectionA.filter( itemA => {
     return itemA.key == objectB.value.filter(itemB => itemB == itemA.key)[0];
   });
-  filterArray.map(element => {
-    result.push(element.key);
-  });
+  filterArray.map(element => result.push(element.key));
   return result;
 }
